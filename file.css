@@ -1,0 +1,86 @@
+body{background-image:url("sfondo.JPG");
+	color:white;
+	font-family:garamond;
+	margin:0px;}
+	
+footer{background-color:white;
+	display:block;
+	text-align:center;
+	margin-top:50%;}
+	
+header{padding:10 px;
+	height:470px;}
+	
+input{width:30%;}
+
+button{width:30%;}
+	
+select{float:left;}
+	
+article{width:70%;
+	padding:10px;
+	position: absolute;
+	height: 650px;
+	margin-top:30px}
+	
+aside{float:left;
+	width:13%;
+	padding:20px;
+	border-style: none double none double;
+	border-width: 5px;}
+	
+a{color: black;}
+  
+ td{width:1500px;
+	font-family:Times New Roman;}
+
+img{display:block;
+	margin-left:auto;
+	margin-right:auto;
+	width:20%;
+	padding:20px}
+	
+h1{text-align:center;}
+
+select{display:block;
+	margin: auto;
+	width:180px;}
+	
+video{display:block;
+	margin:auto;}
+	
+legend{float:left;
+	color:black;}
+
+fieldset{display:block;
+		margin: auto;
+		width: 85%;
+		background-color: rgba(255, 255, 255, 0.5);
+		border: none;
+		border-radius:15px;}
+		
+a:hover {color:tan;}
+
+
+.tabella{display:block;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: white;
+	color: black;
+	width:70%;
+	}
+	
+.tabella1{display:block;
+	margin-left:auto;
+	margin-right:auto;
+	background-color: rgba(255, 255, 255, 0.5);
+	color: black;
+	width:70%;
+	border-radius:10px;
+	height:30px;}
+	
+.testo{color: black;
+	font-family:Times New Roman;
+	text-align:justify;
+	padding:20px;}
+	

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Deliziosi dolci appena sfornati ogni giorno">
+		<meta name="keywords" content="Dolci,Caldi,Deliziosi">
+		<meta name="author" content="Giulia">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Boris Boulangerie</title>
+		<style>p{margin-left:10%;;color:black;}
+			input,button{margin-left:10%;}
+			h1{margin-top:270px;}
+			@keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}
+		</style>
+		<link rel="stylesheet" type="text/css" href="file.css">
+	</head>
+	<body>
+		<header>
+			<img src="logo.JPG">
+			<div class="tabella1">
+				<table style="width:100%">
+					<tr>	
+						<td style="text-align:center;"><a href="home.html"><b>Home</b></a></td>
+						<td style="text-align:center;"><a href="chisiamo.html"><b>Chi siamo</b></a></td>
+						<td style="text-align:center;"><a href="ricette.html"><b>Prodotti</b></a></td>
+						<td style="text-align:center;"><a href="contatti.html"><b>Contatti</b></a></td>
+						<td style="text-align:center;"><a href="registrati.html"><b>Registrati</b></a></td>
+					</tr>
+				</table>
+			</div>
+		</header><br><br><br>
+		<form action="home.html" method="post" onsubmit="return verifica()">
+			<fieldset>
+				<img src="donut.png" alt="French Toast Rotante" style="animation: rotate 40s linear infinite;float:right;width:25%;margin-right:15%;">
+				<p style="margin-top:5%">Email</p>
+				<input type="email" name="email" required autofocus><br>
+				<p>Password</p>
+				<input type="text" name="password" id="num" required><br><br><br>
+				<button type="submit">VERIFICA</button>
+				<p id="feedback"></p>
+				<script>
+					function verifica() {
+					var x = document.getElementById("num").value.length;
+					var y = document.getElementById("num").value;
+					var avviso = "";
+
+					if (y.indexOf(" ") >= 0) {    
+						avviso = "Attenzione: rimuovi gli spazi bianchi!";
+					} else if (x < 8) {    
+						avviso = "Attenzione: la password deve essere di 8 cifre";
+					} else {
+						return true;
+					}
+					document.getElementById("feedback").innerHTML = avviso;
+					return false;
+					}
+				</script>
+			</fieldset>
+		</form>
+		<footer style="margin-top:40px">
+			<div class="tabella">
+				<table>
+					<tr>
+						<td><a href="https://www.instagram.com/boris_lume/" target="_blank"><img src="icona.png" width="30%"></a></td>
+					</tr>
+					<tr>
+						<td>
+							<ul style="list-style-type:none;">
+								<li><a href="https://mail.google.com/mail/u/0/?hl=it#inbox">email:patisseriegmail.com</a></li>
+								<li><a href="https://www.bing.com/search?q=boris+lume+patisserie+boulangerie&qs=UT&pq=boris+lume+pa&sk=UT1&sc=12-13&cvid=A4AFF3857E5B45E1B919725CE7819059&FORM=QBRE&sp=2&ghc=1&lq=0" target="_blank">Phone:3505323341</a></li>
+								<li><a href="https://www.bing.com/search?q=boris+lume+patisserie+boulangerie&qs=UT&pq=boris+lume+pa&sk=UT1&sc=12-13&cvid=A4AFF3857E5B45E1B919725CE7819059&FORM=QBRE&sp=2&ghc=1&lq=0" target="_blank">Indirizzo:Via 48 Rue Caulaincourt</a></li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</footer>
+	</body>
+</html>

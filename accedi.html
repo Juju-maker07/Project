@@ -43,16 +43,17 @@
 					var x = document.getElementById("num").value.length;
 					var y = document.getElementById("num").value;
 					var avviso = "";
-
+					
 					if (y.indexOf(" ") >= 0) {    
 						avviso = "Attenzione: rimuovi gli spazi bianchi!";
 					} else if (x < 8) {    
 						avviso = "Attenzione: la password deve essere di 8 cifre";
 					} else {
+						window.location.href = "home.html";
 						return true;
-					}
-					document.getElementById("feedback").innerHTML = avviso;
-					return false;
+					} 
+						document.getElementById("feedback").innerHTML = avviso;
+					 return false;
 					}
 				</script>
 			</fieldset>

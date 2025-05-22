@@ -74,6 +74,15 @@
 						</td>
 					</tr>
 				</table>
+				<div class="testo" id="lampeggiante" style="font-size: 20px; font-weight: bold;">
+					Important Notice: This website was created solely for educational purposes as part of a school project. It is not affiliated with, sponsored by, or approved by Boris Boulangerie and does not represent an official website. All trademarks, logos, and images used belong to their respective owners.
+				</div>
+				<script>
+					setInterval(() => {
+					let elem = document.getElementById("lampeggiante");
+					elem.style.color = (elem.style.color === "green") ? "red" : "green";
+					}, 2000); 
+				</script>
 			</div>
 		</footer>
 	</body>

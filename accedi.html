@@ -29,31 +29,27 @@
 				</table>
 			</div>
 		</header><br><br><br>
-		<form action="home.html" method="post" onsubmit="return verifica()">
+		<form>
 			<fieldset>
 				<img src="donut.png" alt="French Toast Rotante" style="animation: rotate 40s linear infinite;float:right;width:25%;margin-right:15%;">
 				<p style="margin-top:5%">Email</p>
 				<input type="email" name="email" required autofocus><br>
 				<p>Password</p>
 				<input type="text" name="password" id="num" required><br><br><br>
-				<button type="submit">VERIFICA</button>
+				<button type="button" onclick="verifica()">VERIFICA</button>
 				<p id="feedback"></p>
 				<script>
 					function verifica() {
-					var x = document.getElementById("num").value.length;
-					var y = document.getElementById("num").value;
-					var avviso = "";
-					
-					if (y.indexOf(" ") >= 0) {    
-						avviso = "Attenzione: rimuovi gli spazi bianchi!";
-					} else if (x < 8) {    
-						avviso = "Attenzione: la password deve essere di 8 cifre";
-					} else {
-						window.location.href = "home.html";
-						return true;
-					} 
+					var x, y, avviso;
+					x = document.getElementById("num").value.length;
+					y = document.getElementById("num").value;
+					if (y.indexOf(" ")>=0)    
+						{avviso="Attenzione: rimuovi gli spazi bianchi!";}
+					else if (x < 8)     
+						{avviso="Attenzione: la password deve essere di 8 cifre";}
+					else
+						{window.location.href = "home.html";}
 						document.getElementById("feedback").innerHTML = avviso;
-					 return false;
 					}
 				</script>
 			</fieldset>
@@ -74,16 +70,9 @@
 						</td>
 					</tr>
 				</table>
-				<div class="testo" id="lampeggiante" style="font-size: 20px; font-weight: bold;">
-					Important Notice: This website was created solely for educational purposes as part of a school project. It is not affiliated with, sponsored by, or approved by Boris Boulangerie and does not represent an official website. All trademarks, logos, and images used belong to their respective owners.
-				</div>
-				<script>
-					setInterval(() => {
-					let elem = document.getElementById("lampeggiante");
-					elem.style.color = (elem.style.color === "green") ? "red" : "green";
-					}, 2000); 
-				</script>
 			</div>
 		</footer>
+	</body>
+</html>
 	</body>
 </html>

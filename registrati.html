@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Boris Boulangerie</title>
 		<style>p{color:black;}
-		@keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}
+		 @keyframes pulse {0% {transform: scale(1);}50% {transform: scale(1.1);}100% {transform: scale(1);}}
 		</style>
 		<link rel="stylesheet" type="text/css" href="file.css">
 	</head>
@@ -27,9 +27,9 @@
 				</table>
 			</div>
 		</header><br><br><br>
-		<form action="home.html" method="post" onsubmit="return verifica()">
+		<form>
 			<fieldset>
-				<img src="toast.png" style="animation: rotate 40s linear infinite;float:left;width:30%;margin:110px;">
+				<img src="toast.png" style="animation: pulse 2s infinite;float:left;width:27%;margin:110px;">
 				<p>Nome</p>
 				<input type="text" name="nome" required autofocus>
 				<p>Cognome</p>
@@ -54,26 +54,22 @@
 				<input type="email" name="email" required>
 				<p>Password</p>
 				<input type="text" id="num" required><br><br><br>
-				<button type="submit">VERIFICA</button>
+				<button type="button" onclick="verifica()">VERIFICA</button>
 				<p id="feedback"></p>
 				<script>
 					function verifica() {
-					var x = document.getElementById("num").value.length;
-					var y = document.getElementById("num").value;
-					var avviso = "";
-					
-					if (y.indexOf(" ") >= 0) {    
-						avviso = "Attenzione: rimuovi gli spazi bianchi!";
-					} else if (x < 8) {    
-						avviso = "Attenzione: la password deve essere di 8 cifre";
-					} else {
-						window.location.href = "home.html";
-						return true;
-					} 
+					var x, y, avviso;
+					x = document.getElementById("num").value.length;
+					y = document.getElementById("num").value;
+					if (y.indexOf(" ")>=0)    
+						{avviso="Attenzione: rimuovi gli spazi bianchi!";}
+					else if (x < 8)     
+						{avviso="Attenzione: la password deve essere di 8 cifre";}
+					else
+						{window.location.href = "home.html";}
 						document.getElementById("feedback").innerHTML = avviso;
-					 return false;
 					}
-				</script>
+    </script>
 				<p>Hai gia' un account? <a href="accedi.html">accedi</a></p>
 			</fieldset>
 		</form>
@@ -93,15 +89,6 @@
 						</td>
 					</tr>
 				</table>
-				<div class="testo" id="lampeggiante" style="font-size: 20px; font-weight: bold;">
-					Important Notice: This website was created solely for educational purposes as part of a school project. It is not affiliated with, sponsored by, or approved by Boris Boulangerie and does not represent an official website. All trademarks, logos, and images used belong to their respective owners.
-				</div>
-				<script>
-					setInterval(() => {
-					let elem = document.getElementById("lampeggiante");
-					elem.style.color = (elem.style.color === "green") ? "red" : "green";
-					}, 2000); 
-				</script>
 			</div>
 		</footer>
 	</body>
